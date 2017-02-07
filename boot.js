@@ -3201,7 +3201,7 @@ System.prototype.addDependencies = function addDependencies(dependencies) {
         var name = names[index];
         self.dependencies[name] = true;
         if (!self.systemLocations[name]) {
-            var location = URL.resolve(self.location, "node_modules/" + name + "/");
+            var location = URL.resolve(self.root.location, "node_modules/" + name + "/");
             self.systemLocations[name] = location;
         }
     }
